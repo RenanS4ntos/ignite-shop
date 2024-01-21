@@ -1,4 +1,5 @@
-import { styled } from "..";
+import Link from 'next/link'
+import { styled } from '..'
 
 export const HomeContainer = styled('main', {
   display: 'flex',
@@ -8,7 +9,7 @@ export const HomeContainer = styled('main', {
   minHeight: 656,
 })
 
-export const Product = styled('a', {
+export const Product = styled(Link, {
   background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
   borderRadius: 8,
   cursor: 'pointer',
@@ -44,19 +45,20 @@ export const Product = styled('a', {
 
     strong: {
       fontSize: '$lg',
+      color: '$gray300',
     },
 
     span: {
       fontSize: '$xl',
       fontWeight: 'bold',
       color: '$green300',
-    }
+    },
   },
 
-  '&:hover' : {
+  '&:hover': {
     footer: {
       transform: 'translateY(0%)',
       opacity: 1,
-    }
-  }
+    },
+  },
 })
